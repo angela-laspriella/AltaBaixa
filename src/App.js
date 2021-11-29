@@ -4,7 +4,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>kika e angela.</p>
+<img src={logo} className="App-logo" alt="logo" />
+        <p>Kika e a angela.</p>
         <a
           className="App-link"
           href="https://reactjs.org"
