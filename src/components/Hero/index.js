@@ -7,6 +7,7 @@ const HeroSection = () => {
   return (
     <HeroContainer>
       <HeroContent>kika</HeroContent>
+      <ImageWrap>kika</ImageWrap>
     </HeroContainer>
   );
 };
