@@ -6,8 +6,7 @@ const HeroSection = () => {
   /*Cena vou chamar no pages */
   return (
     <HeroContainer>
-      <HeroContent>kika</HeroContent>
-      <ImageWrap>kika</ImageWrap>
+      <HeroContent></HeroContent>
     </HeroContainer>
   );
 };
