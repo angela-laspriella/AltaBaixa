@@ -20,6 +20,10 @@ export const HeaderContent = styled.div`
   //background-color: blue;
   font-family: "Cutive", serif;
   color: #fbfafa;
+
+  @media screen and (max-width: 1200px) {
+    padding: 0 24px;
+  }
 `;
 
 export const Logo = styled.a`
