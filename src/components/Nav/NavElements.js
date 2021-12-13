@@ -28,14 +28,24 @@ export const Logo = styled.a`
   font-size: 100%;
   text-decoration: none;
   text-transform: uppercase;
+
   &:visited {
     text-decoration: none;
     color: #fbfafa;
   }
+
+  @media screen and (max-width: 900px) {
+    font-size: 90%;
+  }
 `;
 
 export const Title = styled.div`
+  text-align: right;
   font-size: 100%;
   //font-size: 75%;
   text-transform: uppercase;
+
+  @media screen and (max-width: 900px) {
+    font-size: 90%;
+  }
 `;
