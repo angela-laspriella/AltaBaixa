@@ -1,6 +1,6 @@
 export const NavInfo = [
   {
-    logo: "A&B",
+    logo: "Alta & Baixa",
     title: "Revista de Cultura Tipográfica",
   },
 ];
