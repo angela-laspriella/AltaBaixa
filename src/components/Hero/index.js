@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import a1 from "../../images/A1.png";
 import l from "../../images/L.png";
@@ -27,13 +27,30 @@ import {
 } from "./HeroElements";
 
 const HeroSection = () => {
+  //  Isto é o array de img
+  const stackImages = [a1, a2, a3, a4];
+
+  // Isto é o intervalo e onde muda a imagem
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        currentIndex == stackImages.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 2000);
+
+    return () => clearInterval(timer);
+  }, [currentIndex]); // Isto aqui reinicia o loop por alguma razao
+
   /*Cena vou chamar no pages */
   return (
     <HeroContainer>
       <HeroContent>
         <FirstWrap>
           <TopPlease>
-            <img src={a1} />
+            {/* Isto onde metes o nome do array e o intervalo*/}
+            <img src={stackImages[currentIndex]} />{" "}
           </TopPlease>
           <img src={l} />
           <img src={ii} />
