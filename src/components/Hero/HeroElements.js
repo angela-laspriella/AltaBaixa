@@ -6,7 +6,7 @@ export const HeroContainer = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 
   overflow: hidden;
@@ -15,6 +15,7 @@ export const HeroContainer = styled.div`
   padding-top: 24px;
 
   @media screen and (max-width: 900px) {
+    justify-content: flex-end;
     padding-top: 0;
     padding-bottom: 32px;
   }
@@ -22,11 +23,15 @@ export const HeroContainer = styled.div`
 
 export const HeroContent = styled.div`
   max-width: 1200px;
-  width: 100%;
+  width: 70%;
 
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+
+  @media screen and (max-width: 900px) {
+    width: 85%;
+    padding-bottom: 32px;
+  }
 `;
 
 export const FirstWrap = styled.div`
@@ -82,8 +87,6 @@ export const SecondWrap = styled.div`
 `;
 
 export const ThirdWrap = styled.div`
-  width: 100%;
-
   img {
     width: 100%;
     cursor: pointer;
