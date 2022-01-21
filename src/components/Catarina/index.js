@@ -23,6 +23,7 @@ const CatarinaSection = () => {
           </>
         );
       })}
+
       {CatarinaTexto.map((item) => {
         return (
           <>
