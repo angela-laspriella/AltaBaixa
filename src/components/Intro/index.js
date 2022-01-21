@@ -7,7 +7,8 @@ import "./IntroElements.css";
 const IntroSection = () => {
   return (
     <div class="MainContainerN">
-      <p>Intro Section</p>
+      <p id="tres">Intro Section</p>
+      <p>tituog</p>
     </div>
   );
 };
