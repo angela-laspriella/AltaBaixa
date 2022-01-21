@@ -1,14 +1,17 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import "./App.css";
-import NavSection from "./components/Nav";
+
 import Home from "./pages";
 
 function App() {
   return (
-    <>
-      <NavSection />
-      <Home />
-    </>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 
