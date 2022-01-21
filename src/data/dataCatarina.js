@@ -1,5 +1,8 @@
 import emotion from "../images/Catarina/emotion.png";
 import typeface from "../images/Catarina/typeface.png";
+import positive from "../images/Catarina/positive.png";
+import emotional from "../images/Catarina/emotional.png";
+import theApp from "../images/Catarina/theApp.png";
 
 export const Catarina = [
   {
@@ -21,12 +24,14 @@ export const CatarinaTexto = [
   },
   {
     text: "To comprehend how the typographic skeleton could be deformed to represent the emotions present in a text, we opted to use first the valence (positive or negative) and the general weight of the text. The valence takes two possible values, 1 for positive and 0 for negative. The general weight represents the intensity of a certain emotion or valence, ranging from 0, not very intense, to 1, very intense.",
-    img: typeface,
+    img: positive,
   },
   {
     text: "We aimed to distinguish visually the 6 available emotions: happiness, fear, rage, sadness, disgust, and surprise. The concepts behind the shapes of the glyphs are based on the descriptions made by Darwin in “The expression of the emotions in man and animals” about the reactions of the human being to the respective emotion — the way he/she express the emotion, through voice, gestures, or the reactions triggered by certain emotions.",
+    img: emotional,
   },
   {
     text: "The main goal of the application is to guide the user in the creation of a text composed with the generative typeface. As input, the application receives a text, and as output, the application can export (i) a PDF file in which the inserted text is composed with the resulting glyphs and (ii) a typeface in the True Type Format (TTF), representing the overall emotion of the input text. A video exemplifying the interaction with the application can be seen here..",
+    img: theApp,
   },
 ];

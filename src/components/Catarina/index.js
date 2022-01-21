@@ -26,10 +26,10 @@ const CatarinaSection = () => {
       {CatarinaTexto.map((item) => {
         return (
           <>
-            <Text>{item.text}</Text>
             <ImageContainer>
               <img src={item.img} />
             </ImageContainer>
+            <Text>{item.text}</Text>
           </>
         );
       })}
