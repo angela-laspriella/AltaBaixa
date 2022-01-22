@@ -11,35 +11,46 @@ export const Title = styled.h2`
   font-family: nazare, sans-serif;
   font-weight: 800;
   font-style: normal;
-  font-size: 1000%;
+  font-size: 900%;
 
   color: black;
 `;
 
 export const Name = styled.p`
-  color: black;
-  font-size: 300%;
+  font-family: artigo, serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 500%;
 
-  margin-top: 4%;
+  color: black;
+
+  margin-top: 2%;
+  margin-left: 4%;
 `;
 
 export const Intro = styled.p`
+  font-family: artigo, serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 300%;
+
   color: black;
 
   width: 60%;
-  font-size: 300%;
-  font-weight: 400;
 
   margin-top: 4%;
   padding-left: 4%;
 `;
 
 export const Text = styled.p`
+  font-family: artigo, serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 200%;
+
   color: black;
 
   width: 60%;
-  font-size: 200%;
-  font-weight: 400;
 
   margin-top: 4%;
   padding-left: 4%;

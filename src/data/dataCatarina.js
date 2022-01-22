@@ -9,7 +9,16 @@ export const Catarina = [
     text: "typEm — Adapting a Typeface to Text Emotions",
     name: "Catarina Maçãs",
     intro:
-      "The introduction of programmatic concepts brought to typography new experiments, concepts, and the possibility to create generative typefaces, capable of adapting to different contexts. This work aims to explore these new creative possibilities in the field of type design. Through the implementation of a generative system, we created a typeface that adapts its shape to the sentiments expressed in a text. In this project, we used the emotional values of each sentence of a given text to deform the typographic glyphs to represent those emotional values. Additionally, and to enable the user to interact with the system, we implemented an application which receives a text as input and, as output, exports the input text composed with our generative typeface.",
+      "The introduction of programmatic concepts brought to typography new experiments, concepts, and the possibility to create generative typefaces, capable of adapting to different contexts. <b> This work aims to explore these new creative possibilities in the field of type design. <b> Through the implementation of a generative system, we created a typeface that adapts its shape to the sentiments expressed in a text. In this project, we used the emotional values of each sentence of a given text to deform the typographic glyphs to represent those emotional values. Additionally, and to enable the user to interact with the system, we implemented an application which receives a text as input and, as output, exports the input text composed with our generative typeface.",
+
+    intro: [
+      "The introduction of programmatic concepts brought to typography new experiments, concepts, and the possibility to create generative typefaces, capable of adapting to different contexts.",
+      <b>
+        This work aims to explore these new creative possibilities in the field
+        of type design.
+      </b>,
+      "Through the implementation of a generative system, we created a typeface that adapts its shape to the sentiments expressed in a text. In this project, we used the emotional values of each sentence of a given text to deform the typographic glyphs to represent those emotional values. Additionally, and to enable the user to interact with the system, we implemented an application which receives a text as input and, as output, exports the input text composed with our generative typeface.",
+    ],
   },
 ];
 
