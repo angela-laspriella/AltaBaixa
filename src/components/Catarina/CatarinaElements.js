@@ -8,10 +8,12 @@ export const MainContainer = styled.div`
 `;
 
 export const Title = styled.h2`
-  color: black;
-
-  font-size: 1000%;
+  font-family: nazare, sans-serif;
   font-weight: 800;
+  font-style: normal;
+  font-size: 1000%;
+
+  color: black;
 `;
 
 export const Name = styled.p`
