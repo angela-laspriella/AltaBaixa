@@ -15,6 +15,9 @@ import k1 from "../../images/Intro/K1.png";
 import k2 from "../../images/Intro/K2.png";
 import lMolde from "../../images/Intro/L_molde.png";
 import l from "../../images/Intro/L.png";
+
+import titulo from "../../images/Intro/ABTitulo.png";
+
 //import Fa1 from "../../images/01_firstA/A1.png"; // Exemplo de como exportar uma imagem -- import NomeVariavel from "url"
 
 import {
@@ -26,6 +29,7 @@ import {
   SecondRow,
   Text,
   TextMuda,
+  FirstRowContainer,
 } from "./IntroElements";
 //import "./IntroElements.css";
 
@@ -34,45 +38,86 @@ import {
 const IntroSection = () => {
   return (
     <MainContainer>
-      <Title>ALTA & BAIXA</Title>
-      <Dir>
-        <FirstRow>
-          <img src={eMolde} />
-          <img src={e} />
-          <img src={fMolde} />
-          <img src={f} />
-        </FirstRow>
-        <SecondRow>
-          <img src={gMolde} />
-          <img src={g1} />
-          <img src={g2} />
-          <img src={hMolde} />
-        </SecondRow>
-      </Dir>
-      <Esq>
-        <FirstRow>
-          <img src={h} />
-          <img src={iMolde} />
-          <img src={i} />
-          <img src={kMolde} />
-        </FirstRow>
-        <SecondRow>
-          <img src={k1} />
-          <img src={k2} />
-          <img src={lMolde} />
-          <img src={l} />
-        </SecondRow>
-      </Esq>
-      <Text>
-        é uma <TextMuda>revista de cultura tipográfica</TextMuda> desenvolvida
-        no âmbito académico e que se propõe a refletir sobre todos os aspectos
-        da tipografia, incluindo a sua história, e cujos conteúdos são
-        deliberadamente ecléticos. Trata-se de uma revista que pretende publicar
-        material histórico e contemporâneo, a partir de fontes académicas e
-        jornalísticas. Isto significa que a revista deve oferecer uma mistura de
-        artigos e materiais de referência e transmitir a convicção de que o
-        opções de design devem estar em consonância com o conteúdo.
-      </Text>
+      <FirstRowContainer>
+        <Title>
+          <div>
+            <img src={titulo} />
+          </div>
+        </Title>
+        <Dir>
+          <FirstRow>
+            <div>
+              <img src={eMolde} />
+            </div>
+            <div>
+              <img src={e} />
+            </div>
+            <div>
+              <img src={fMolde} />
+            </div>
+            <div>
+              <img src={f} />
+            </div>
+          </FirstRow>
+          <SecondRow>
+            <div>
+              <img src={gMolde} />
+            </div>
+            <div>
+              <img src={g1} />
+            </div>
+            <div>
+              <img src={g2} />
+            </div>
+            <div>
+              <img src={hMolde} />
+            </div>
+          </SecondRow>
+        </Dir>
+      </FirstRowContainer>
+      <FirstRowContainer>
+        <Esq>
+          <FirstRow>
+            <div>
+              <img src={h} />
+            </div>
+            <div>
+              <img src={iMolde} />
+            </div>
+            <div>
+              <img src={i} />
+            </div>
+            <div>
+              <img src={kMolde} />
+            </div>
+          </FirstRow>
+          <SecondRow>
+            <div>
+              <img src={k1} />
+            </div>
+            <div>
+              <img src={k2} />
+            </div>
+            <div>
+              <img src={lMolde} />
+            </div>
+            <div>
+              <img src={l} />
+            </div>
+          </SecondRow>
+        </Esq>
+        <Text>
+          é uma <TextMuda>revista de cultura tipográfica</TextMuda> desenvolvida
+          no âmbito académico e que se propõe a refletir sobre todos os aspectos
+          da tipografia, incluindo a sua história, e cujos conteúdos são
+          deliberadamente ecléticos. Trata-se de uma revista que pretende
+          publicar material histórico e contemporâneo, a partir de fontes
+          académicas e jornalísticas. Isto significa que a revista deve oferecer
+          uma mistura de artigos e materiais de referência e transmitir a
+          convicção de que o opções de design devem estar em consonância com o
+          conteúdo.
+        </Text>
+      </FirstRowContainer>
     </MainContainer>
   );
 };
