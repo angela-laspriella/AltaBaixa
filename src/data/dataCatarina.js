@@ -58,8 +58,13 @@ export const CatarinaTexto = [
       "Two approaches for the design of of 'a' glyphs of negative valences.",
   },
   {
+    showSlider: "false",
+    showImage: "false",
     text: "We aimed to distinguish visually the 6 available emotions: happiness, fear, rage, sadness, disgust, and surprise. The concepts behind the shapes of the glyphs are based on the descriptions made by Darwin in “The expression of the emotions in man and animals” about the reactions of the human being to the respective emotion — the way he/she express the emotion, through voice, gestures, or the reactions triggered by certain emotions.",
     img: emotional,
+    smalltitle: "Figure 4",
+    smalltext:
+      "Variations of the 'a' glyph depending on the emotional value: sadness, disgust, surprise, rage, fear, and happiness, respectively.",
   },
   {
     false: "false",

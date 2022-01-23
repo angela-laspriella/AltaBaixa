@@ -52,7 +52,8 @@ export const SmallContainer = styled.div``;
 export const ImgOtherContainer = styled.div`
   margin: ${({ margin }) => (margin ? "2%" : "auto")};
 
-  display: flex;
+  display: ${({ showImage }) => (showImage ? "none" : "flex")};
+
   flex-direction: ${({ row }) => (row ? "column" : "row")};
 
   img {
@@ -122,4 +123,17 @@ export const SmallText = styled.p`
   font-weight: 200;
   font-style: normal;
   font-size: 100%;
+`;
+
+export const SliderContainer = styled.div`
+  display: ${({ showSlider }) => (showSlider ? "block" : "none")};
+  width: 250px;
+
+  margin: ${({ margin }) => (margin ? "2%" : "auto")};
+
+  img {
+    height: 80%;
+    width: auto;
+    margin: auto;
+  }
 `;
