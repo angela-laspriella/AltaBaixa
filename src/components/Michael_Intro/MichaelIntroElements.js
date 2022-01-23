@@ -89,39 +89,74 @@ export const SliderContainer = styled.div`
     width: 600px;
   }
 
-  padding-top: 3%;
   padding-bottom: 4%;
+
+  button {
+    height: 24px;
+    width: auto;
+
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    margin-right: 16px;
+
+    img {
+      height: 100%;
+    }
+
+    cursor: pointer;
+  }
+
+  .inactive {
+    opacity: 0.5;
+  }
 `;
 
 export const Coiso = styled.div`
   width: fit-content;
   height: fit-content;
-  min-height: 550px;
+  min-height: 585px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Number = styled.div`
   position: absolute;
   z-index: 1;
+  margin-top: -10%;
 
   img {
-    margin-top: 2%;
-    width: 50%;
-    max-width: 150px;
+    height: 50%;
+    max-height: 250px;
+    opacity: 0.3;
+  }
+
+  @media screen and (max-width: 900px) {
+    padding-left: 5%;
+    img {
+      max-height: 200px;
+    }
   }
 `;
+
 export const TextWrap = styled.div`
   position: absolute;
   z-index: 2;
 
   display: flex;
   flex-direction: column;
-  padding-left: 20%;
-  margin-top: 3%;
+  padding-left: 40%;
+  margin-bottom: 2%;
+
+  @media screen and (max-width: 900px) {
+    padding-left: 25%;
+  }
 `;
 
 export const TitleSlider = styled.h3`
   color: white;
-  width: 70%;
+  width: 75%;
 
   font-family: nazare, sans-serif;
   font-weight: 600;
@@ -140,4 +175,8 @@ export const TextSlider = styled.p`
   font-size: 120%;
 
   margin-top: 4%;
+
+  @media screen and (max-width: 900px) {
+    font-size: 100%;
+  }
 `;

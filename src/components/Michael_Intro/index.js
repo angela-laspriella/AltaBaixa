@@ -5,6 +5,20 @@ import esq from "../../images/Michael/esq.png";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+import oneSmall from "../../images/Michael/1small.png";
+import twoSmall from "../../images/Michael/2small.png";
+import threeSmall from "../../images/Michael/3small.png";
+import fourSmall from "../../images/Michael/4small.png";
+import fiveSmall from "../../images/Michael/5small.png";
+import sixSmall from "../../images/Michael/6small.png";
+import sevenSmall from "../../images/Michael/7small.png";
+import eightSmall from "../../images/Michael/8small.png";
+import nineSmall from "../../images/Michael/9small.png";
+import tenSmall from "../../images/Michael/10small.png";
+import elevenSmall from "../../images/Michael/11small.png";
+import twelveSmall from "../../images/Michael/12small.png";
+import thirdtennSmall from "../../images/Michael/13small.png";
+
 import {
   MainContainer,
   SecondContainer,
@@ -54,7 +68,21 @@ const MichaelSection = () => {
       active,
       carouselState: { currentSlide, deviceType },
     } = rest;
-    const carouselItems = ["1", "2", "3"];
+    const carouselItems = [
+      oneSmall,
+      twoSmall,
+      threeSmall,
+      fourSmall,
+      fiveSmall,
+      sixSmall,
+      sevenSmall,
+      eightSmall,
+      nineSmall,
+      tenSmall,
+      elevenSmall,
+      twelveSmall,
+      thirdtennSmall,
+    ];
     // onMove means if dragging or swiping in progress.
     // active is provided by this lib for checking if the item is active or not.
     return (
@@ -62,7 +90,7 @@ const MichaelSection = () => {
         className={active ? "active" : "inactive"}
         onClick={() => onClick()}
       >
-        {React.Children.toArray(carouselItems)[index]}
+        <img src={React.Children.toArray(carouselItems)[index]} />
       </button>
     );
   };
