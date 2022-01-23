@@ -36,10 +36,51 @@ export const Intro = styled.p`
 
   color: black;
 
-  width: 60%;
-
   margin-top: 4%;
   padding-left: 4%;
+`;
+
+export const OtherContainer = styled.div`
+  width: 100%;
+
+  display: flex;
+  flex-direction: ${({ row }) => (row ? "column" : "row")};
+`;
+
+export const SmallContainer = styled.div``;
+
+export const ImgOtherContainer = styled.div`
+  margin: ${({ margin }) => (margin ? "2%" : "auto")};
+
+  display: flex;
+  flex-direction: ${({ row }) => (row ? "column" : "row")};
+
+  img {
+    /* mix-blend-mode: darken; */
+    width: 100%;
+    max-width: ${({ small }) => (small ? "400px" : "200px")};
+    height: auto;
+
+    margin-right: 2%;
+  }
+`;
+
+export const IntroContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  div:first-child {
+    width: 70%;
+  }
+
+  div:last-child {
+    width: 30%;
+  }
+
+  img {
+    width: 100%;
+  }
 `;
 
 export const Text = styled.p`
@@ -63,4 +104,22 @@ export const ImageContainer = styled.div`
     margin-top: 8%;
     width: 100%;
   }
+`;
+
+export const SmallTitle = styled.p`
+  font-family: artigo, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 100%;
+
+  margin-top: 4%;
+`;
+
+export const SmallText = styled.p`
+  width: 300px;
+
+  font-family: artigo, serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 100%;
 `;
