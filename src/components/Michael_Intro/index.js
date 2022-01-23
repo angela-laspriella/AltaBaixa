@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react"; // Obrigatório ter
 import dir from "../../images/Michael/dir.png";
 import esq from "../../images/Michael/esq.png";
 
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
 import {
   MainContainer,
   SecondContainer,
@@ -13,11 +16,57 @@ import {
   TitleContainer,
   Title1,
   Title2,
+  SliderContainer,
+  Coiso,
+  Number,
+  TextWrap,
+  TitleSlider,
+  TextSlider,
 } from "../Michael_Intro/MichaelIntroElements";
+
+import { MichaelTexto } from "../../data/dataMichael";
 
 //import "./MichaelElements.css";
 
 const MichaelSection = () => {
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+  };
+
+  const CustomDot = ({ onClick, ...rest }) => {
+    const {
+      onMove,
+      index,
+      active,
+      carouselState: { currentSlide, deviceType },
+    } = rest;
+    const carouselItems = ["1", "2", "3"];
+    // onMove means if dragging or swiping in progress.
+    // active is provided by this lib for checking if the item is active or not.
+    return (
+      <button
+        className={active ? "active" : "inactive"}
+        onClick={() => onClick()}
+      >
+        {React.Children.toArray(carouselItems)[index]}
+      </button>
+    );
+  };
+
   return (
     <MainContainer>
       <Title>Thirteen Ways of Looking at a Typeface</Title>
@@ -74,6 +123,42 @@ const MichaelSection = () => {
         <Title1>why choose a particular typeface?</Title1>
         <Title2>Here are 13 reasons.</Title2>
       </TitleContainer>
+      <SliderContainer>
+        <Carousel
+          swipeable={false}
+          draggable={false}
+          showDots={true}
+          responsive={responsive}
+          ssr={true} // means to render carousel on server-side.
+          infinite={true}
+          autoPlay={false}
+          keyBoardControl={true}
+          customTransition="all .5"
+          transitionDuration={500}
+          containerClass="carousel-container"
+          removeArrowOnDeviceType={["tablet", "mobile"]}
+          dotListClass="custom-dot-list-style"
+          itemClass="carousel-item-padding-40-px"
+          arrows={false}
+          renderButtonGroupOutside={true}
+          showDots
+          customDot={<CustomDot />}
+        >
+          {MichaelTexto.map((item) => {
+            return (
+              <Coiso>
+                <Number>
+                  <img src={item.number} />
+                </Number>
+                <TextWrap>
+                  <TitleSlider>{item.title}</TitleSlider>
+                  <TextSlider>{item.text}</TextSlider>
+                </TextWrap>
+              </Coiso>
+            );
+          })}
+        </Carousel>
+      </SliderContainer>
     </MainContainer>
   );
 };
