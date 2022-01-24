@@ -34,7 +34,10 @@ export const SecondContainer = styled.div`
 `;
 
 export const ImgContainer = styled.div`
+  width: 24vw;
+
   img {
+    width: 100%;
   }
 `;
 

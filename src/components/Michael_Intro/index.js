@@ -1,9 +1,23 @@
 import React, { useState, useEffect } from "react"; // Obrigatório ter
-import dir from "../../images/Michael/dir.png";
-import esq from "../../images/Michael/esq.png";
+
+// Dir -------------------
+
+import dir1 from "../../images/Michael/dir1.png";
+import dir2 from "../../images/Michael/dir2.png";
+import dir3 from "../../images/Michael/dir3.png";
+
+// Esq -------------------
+
+import esq1 from "../../images/Michael/esq1.png";
+import esq2 from "../../images/Michael/esq2.png";
+import esq3 from "../../images/Michael/esq3.png";
+
+// Carousel -------------------
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+
+// Carousel images -------------------
 
 import oneSmall from "../../images/Michael/1small.png";
 import twoSmall from "../../images/Michael/2small.png";
@@ -43,6 +57,42 @@ import { MichaelTexto } from "../../data/dataMichael";
 //import "./MichaelElements.css";
 
 const MichaelSection = () => {
+  // Dir -------------------
+
+  //  Isto é o array de img
+  const DirA = [dir1, dir2, dir3];
+
+  // Isto é o intervalo e onde muda a imagem
+  const [currentIndexFa, setCurrentIndexFa] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndexFa((prevIndex) =>
+        currentIndexFa == DirA.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [currentIndexFa]); // Isto aqui reinicia o loop por alguma razao
+
+  // Esq -------------------
+
+  //  Isto é o array de img
+  const EsqA = [esq1, esq2, esq3];
+
+  // Isto é o intervalo e onde muda a imagem
+  const [currentIndexEsq, setCurrentIndexEsq] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndexEsq((prevIndex) =>
+        currentIndexEsq == EsqA.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 1500);
+
+    return () => clearInterval(timer);
+  }, [currentIndexEsq]); // Isto aqui reinicia o loop por alguma razao
+
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -102,7 +152,7 @@ const MichaelSection = () => {
       <Name>Michael Bierut</Name>
       <SecondContainer>
         <ImgContainer>
-          <img src={esq} />
+          <img src={EsqA[currentIndexEsq]} />
         </ImgContainer>
         <Text>
           For the first ten years of my career, I worked for Massimo Vignelli, a
@@ -145,7 +195,7 @@ const MichaelSection = () => {
           and come up with some answers to this seemingly simple question:
         </Text>
         <ImgContainer>
-          <img src={dir} />
+          <img src={DirA[currentIndexFa]} />
         </ImgContainer>
       </SecondContainer>
       <TitleContainer>
