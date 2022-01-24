@@ -50,7 +50,8 @@ export const OtherContainer = styled.div`
 export const SmallContainer = styled.div``;
 
 export const ImgOtherContainer = styled.div`
-  margin: ${({ margin }) => (margin ? "2%" : "auto")};
+  margin: auto;
+  margin-top: ${({ margin }) => (margin ? "2%" : "0")};
 
   display: ${({ showImage }) => (showImage ? "none" : "flex")};
 
@@ -80,7 +81,10 @@ export const IntroContainer = styled.div`
   }
 
   img {
-    width: 100%;
+    float: right;
+    padding-right: 15%;
+
+    width: 40%;
   }
 `;
 
@@ -132,8 +136,58 @@ export const SliderContainer = styled.div`
   margin: ${({ margin }) => (margin ? "2%" : "auto")};
 
   img {
-    height: 80%;
-    width: auto;
+    width: 90%;
+    height: auto;
     margin: auto;
+  }
+`;
+
+export const SliderContainerF = styled.div`
+  display: ${({ showSliderF }) => (showSliderF ? "block" : "none")};
+  width: 250px;
+
+  margin: ${({ margin }) => (margin ? "2%" : "auto")};
+
+  img {
+    width: 100%;
+  }
+`;
+
+export const OtherContainerParts = styled.div`
+  display: ${({ showSliderO }) => (showSliderO ? "block" : "none")};
+  width: 100%;
+  margin: ${({ margin }) => (margin ? "2%" : "auto")};
+
+  img {
+    width: 100%;
+    margin-left: 30%;
+  }
+`;
+
+export const ImgOtherGridContainer = styled.div`
+  margin: auto;
+  margin-top: ${({ margin }) => (margin ? "2%" : "0")};
+
+  display: ${({ showGrid }) => (showGrid ? "flex" : "none")};
+
+  flex-direction: ${({ row }) => (row ? "column" : "row")};
+`;
+
+export const GridImage = styled.div`
+  width: 424px;
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-right: 40px;
+
+  margin-bottom: 8%;
+
+  gap: 24px;
+
+  img {
+    width: 200px;
+    height: auto;
+
+    filter: drop-shadow(8px 8px 8px rgba(166, 71, 34, 0.4));
   }
 `;
