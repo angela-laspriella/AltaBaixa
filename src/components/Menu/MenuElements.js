@@ -35,16 +35,21 @@ export const BallContainer = styled.a`
   }
 
   p {
-    display: none;
+    opacity: 0;
+
+    transition-duration: 0.6s;
   }
 
   &:hover {
     div {
       background: #5c3120;
+      transition-duration: 0.5s;
+      opacity: 1;
     }
 
     p {
-      display: inline-block;
+      opacity: 1;
+      transition-duration: 0.5s;
     }
   }
 `;
@@ -53,6 +58,7 @@ export const Ball = styled.div`
   width: 20px;
   height: 20px;
   border-radius: 50%;
-
+  transition-duration: 0.5s;
   background: #d7d7d7;
+  opacity: 0.6;
 `;

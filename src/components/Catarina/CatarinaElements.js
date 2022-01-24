@@ -188,6 +188,6 @@ export const GridImage = styled.div`
     width: 200px;
     height: auto;
 
-    filter: drop-shadow(8px 8px 8px #1c1c1c);
+    filter: drop-shadow(8px 8px 8px rgba(166, 71, 34, 0.4));
   }
 `;
