@@ -133,7 +133,8 @@ export const SliderContainer = styled.div`
   margin: ${({ margin }) => (margin ? "2%" : "auto")};
 
   img {
-    width: 100%;
+    width: 90%;
+    height: auto;
     margin: auto;
     mix-blend-mode: darken;
   }

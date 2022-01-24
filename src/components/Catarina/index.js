@@ -127,7 +127,7 @@ const CatarinaSection = () => {
   }, [currentIndexNeg]); // Isto aqui reinicia o loop por alguma razao
 
   return (
-    <MainContainer>
+    <MainContainer id="tyEm">
       {Catarina.map((item) => {
         return (
           <>
@@ -219,7 +219,7 @@ const CatarinaSection = () => {
                   autoPlay={true}
                   keyBoardControl={true}
                   customTransition="all .005"
-                  transitionDuration={500}
+                  transitionDuration={0.05}
                   containerClass="carousel-container"
                   removeArrowOnDeviceType={["tablet", "mobile"]}
                   dotListClass="custom-dot-list-style"
@@ -247,7 +247,7 @@ const CatarinaSection = () => {
                 <Carousel
                   swipeable={false}
                   draggable={false}
-                  showDots={true}
+                  showDots={false}
                   responsive={responsive}
                   ssr={true} // means to render carousel on server-side.
                   infinite={true}

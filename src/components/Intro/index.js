@@ -37,7 +37,7 @@ import {
 
 const IntroSection = () => {
   return (
-    <MainContainer>
+    <MainContainer id="intro">
       <FirstRowContainer>
         <Title>
           <div>

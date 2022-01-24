@@ -177,7 +177,7 @@ const MichaelSection = () => {
   };
 
   return (
-    <div ref={ref} className="outside">
+    <div ref={ref} className="outside" id="thirdteen">
       <MainContainer className="MichaelContainer">
         <div className="scroll"></div>
         <div className="oi">
