@@ -2,12 +2,22 @@ import React, { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+// Images de slider que era uma animacao
+
 import a1 from "../../images/Catarina/a1.png";
 import a2 from "../../images/Catarina/a2.png";
 import a3 from "../../images/Catarina/a3.png";
 import a4 from "../../images/Catarina/a4.png";
 import a5 from "../../images/Catarina/a5.png";
 import a6 from "../../images/Catarina/a6.png";
+
+// Images do primeiro slider da catarina
+
+import aa1 from "../../images/Catarina/aa1.png";
+import aa2 from "../../images/Catarina/aa2.png";
+import aa3 from "../../images/Catarina/aa3.png";
+import aa4 from "../../images/Catarina/aa4.png";
+import aa5 from "../../images/Catarina/aa5.png";
 
 import {
   MainContainer,
@@ -23,6 +33,8 @@ import {
   SmallText,
   SmallContainer,
   SliderContainer,
+  SliderContainerF,
+  OtherContainerParts,
 } from "./CatarinaElements";
 
 import { Catarina, CatarinaTexto } from "../../data/dataCatarina";
@@ -94,6 +106,75 @@ const CatarinaSection = () => {
                 </SmallContainer>
               </ImgOtherContainer>
 
+              <OtherContainerParts showSliderO={item.showSliderO}>
+                <ImgOtherContainer
+                  margin={item.margin}
+                  row={item.row}
+                  small={item.small}
+                >
+                  <img src={item.img2} />
+                  <SmallContainer>
+                    <div>
+                      <SmallTitle>{item.smalltitle}</SmallTitle>
+                      <SmallText>{item.smalltext}</SmallText>
+                    </div>
+                  </SmallContainer>
+                </ImgOtherContainer>
+                <Text>{item.text2}</Text>
+
+                <ImgOtherContainer
+                  margin={item.margin}
+                  row={item.row}
+                  small={item.small}
+                >
+                  <img src={item.img3} />
+                  <SmallContainer>
+                    <div>
+                      <SmallTitle>{item.smalltitle2}</SmallTitle>
+                      <SmallText>{item.smalltext2}</SmallText>
+                    </div>
+                  </SmallContainer>
+                </ImgOtherContainer>
+                <Text>{item.text3}</Text>
+              </OtherContainerParts>
+
+              {/* Primeiro slider */}
+
+              <SliderContainerF showSliderF={item.showSliderF}>
+                <Carousel
+                  swipeable={false}
+                  draggable={false}
+                  showDots={false}
+                  responsive={responsive}
+                  ssr={true} // means to render carousel on server-side.
+                  infinite={true}
+                  autoPlay={true}
+                  keyBoardControl={true}
+                  customTransition="all .005"
+                  transitionDuration={500}
+                  containerClass="carousel-container"
+                  removeArrowOnDeviceType={["tablet", "mobile"]}
+                  dotListClass="custom-dot-list-style"
+                  itemClass="carousel-item-padding-40-px"
+                  arrows={false}
+                  renderButtonGroupOutside={true}
+                >
+                  <img src={aa1} />
+                  <img src={aa2} />
+                  <img src={aa3} />
+                  <img src={aa4} />
+                  <img src={aa5} />
+                </Carousel>
+                <SmallContainer>
+                  <div>
+                    <SmallTitle>{item.smalltitle}</SmallTitle>
+                    <SmallText>{item.smalltext}</SmallText>
+                  </div>
+                </SmallContainer>
+              </SliderContainerF>
+
+              {/* Segundo slider */}
+
               <SliderContainer showSlider={item.showSlider}>
                 <Carousel
                   swipeable={false}
@@ -102,10 +183,10 @@ const CatarinaSection = () => {
                   responsive={responsive}
                   ssr={true} // means to render carousel on server-side.
                   infinite={true}
-                  autoPlay={false}
+                  autoPlay={true}
                   keyBoardControl={true}
-                  customTransition="all .5"
-                  transitionDuration={500}
+                  customTransition="all .005"
+                  transitionDuration={0.5}
                   containerClass="carousel-container"
                   removeArrowOnDeviceType={["tablet", "mobile"]}
                   dotListClass="custom-dot-list-style"

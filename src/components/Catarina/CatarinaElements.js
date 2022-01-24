@@ -50,7 +50,8 @@ export const OtherContainer = styled.div`
 export const SmallContainer = styled.div``;
 
 export const ImgOtherContainer = styled.div`
-  margin: ${({ margin }) => (margin ? "2%" : "auto")};
+  margin: auto;
+  margin-top: ${({ margin }) => (margin ? "2%" : "0")};
 
   display: ${({ showImage }) => (showImage ? "none" : "flex")};
 
@@ -132,8 +133,30 @@ export const SliderContainer = styled.div`
   margin: ${({ margin }) => (margin ? "2%" : "auto")};
 
   img {
-    height: 80%;
-    width: auto;
+    width: 100%;
     margin: auto;
+    mix-blend-mode: darken;
+  }
+`;
+
+export const SliderContainerF = styled.div`
+  display: ${({ showSliderF }) => (showSliderF ? "block" : "none")};
+  width: 250px;
+
+  margin: ${({ margin }) => (margin ? "2%" : "auto")};
+
+  img {
+    width: 100%;
+  }
+`;
+
+export const OtherContainerParts = styled.div`
+  display: ${({ showSliderO }) => (showSliderO ? "block" : "none")};
+  width: 100%;
+  margin: ${({ margin }) => (margin ? "2%" : "auto")};
+
+  img {
+    width: 100%;
+    margin-left: 30%;
   }
 `;

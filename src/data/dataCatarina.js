@@ -6,7 +6,8 @@ import theApp from "../images/Catarina/theApp.png";
 
 import as from "../images/Catarina/as.png";
 import figure1 from "../images/Catarina/figure1.png";
-import figure2 from "../images/Catarina/figure2-3.png";
+import figure2 from "../images/Catarina/figure2.png";
+import figure3 from "../images/Catarina/figure3.png";
 import figure5 from "../images/Catarina/figure5.png";
 
 export const Catarina = [
@@ -34,6 +35,8 @@ export const CatarinaTexto = [
     img: emotion,
   },
   {
+    showSliderF: "false",
+    showImage: "false",
     row: "false",
     text: "To represent the text's emotion we apply the following workflow: (i) we divide the text by sentence; (ii) we detect the emotions and valences present in the sentence with the Synesketch library; (iii) we morph the typographic glyphs used in each word, to represent the corresponding valence or emotion; (iv) we compose the text with the resulting glyphs; and (v) we generate a typeface which represents the general emotion described in the text. We opted to analyse each sentence in the text independently because the same text can express several emotions. With this, as the emotions change throughout the text, the typeface adapts and also changes to represent the new emotion value.",
     img: typeface,
@@ -47,9 +50,16 @@ export const CatarinaTexto = [
     margin: "false",
     small: "false",
 
-    text: "To comprehend how the typographic skeleton could be deformed to represent the emotions present in a text, we opted to use first the valence (positive or negative) and the general weight of the text. The valence takes two possible values, 1 for positive and 0 for negative. The general weight represents the intensity of a certain emotion or valence, ranging from 0, not very intense, to 1, very intense.",
+    showSliderO: "false",
+    showImage: "false",
+
+    text: "To comprehend how the typographic skeleton could be deformed to represent the emotions present in a text, we opted to use first the valence (positive or negative) and the general weight of the text. The valence takes two possible values, 1 for positive",
+    text2: "and 0 for negative. ",
+    text3:
+      "The general weight represents the intensity of a certain emotion or valence, ranging from 0, not very intense, to 1, very intense.",
     img: positive,
     img2: figure2,
+    img3: figure3,
     smalltitle: "Figure 2",
     smalltext:
       "Two approaches for the design of of 'a' glyphs of positive valences.",
