@@ -4,12 +4,30 @@ import "react-multi-carousel/lib/styles.css";
 
 // Images de slider que era uma animacao
 
-import a1 from "../../images/Catarina/a1.png";
-import a2 from "../../images/Catarina/a2.png";
-import a3 from "../../images/Catarina/a3.png";
-import a4 from "../../images/Catarina/a4.png";
-import a5 from "../../images/Catarina/a5.png";
-import a6 from "../../images/Catarina/a6.png";
+import a1 from "../../images/Catarina/1.png";
+import a2 from "../../images/Catarina/2.png";
+import a3 from "../../images/Catarina/3.png";
+import a4 from "../../images/Catarina/4.png";
+import a5 from "../../images/Catarina/5.png";
+import a6 from "../../images/Catarina/6.png";
+import a7 from "../../images/Catarina/7.png";
+import a8 from "../../images/Catarina/8.png";
+import a9 from "../../images/Catarina/9.png";
+import a10 from "../../images/Catarina/10.png";
+import a11 from "../../images/Catarina/11.png";
+import a12 from "../../images/Catarina/12.png";
+import a13 from "../../images/Catarina/13.png";
+import a14 from "../../images/Catarina/14.png";
+import a15 from "../../images/Catarina/15.png";
+import a16 from "../../images/Catarina/16.png";
+import a17 from "../../images/Catarina/17.png";
+import a18 from "../../images/Catarina/18.png";
+import a19 from "../../images/Catarina/19.png";
+import a20 from "../../images/Catarina/20.png";
+import a21 from "../../images/Catarina/21.png";
+import a22 from "../../images/Catarina/22.png";
+import a23 from "../../images/Catarina/23.png";
+import a24 from "../../images/Catarina/24.png";
 
 // Images do primeiro slider da catarina
 
@@ -200,6 +218,24 @@ const CatarinaSection = () => {
                   <img src={a4} />
                   <img src={a5} />
                   <img src={a6} />
+                  <img src={a7} />
+                  <img src={a8} />
+                  <img src={a9} />
+                  <img src={a10} />
+                  <img src={a11} />
+                  <img src={a12} />
+                  <img src={a13} />
+                  <img src={a14} />
+                  <img src={a15} />
+                  <img src={a16} />
+                  <img src={a17} />
+                  <img src={a18} />
+                  <img src={a19} />
+                  <img src={a20} />
+                  <img src={a21} />
+                  <img src={a22} />
+                  <img src={a23} />
+                  <img src={a24} />
                 </Carousel>
                 <SmallContainer>
                   <div>
