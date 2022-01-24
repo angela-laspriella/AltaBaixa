@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -51,6 +51,7 @@ const CatarinaSection = () => {
       {Catarina.map((item) => {
         return (
           <>
+            <img src={item.img} />
             <Title>{item.text}</Title>
             <IntroContainer>
               <div>
@@ -64,7 +65,6 @@ const CatarinaSection = () => {
           </>
         );
       })}
-
       {CatarinaTexto.map((item) => {
         return (
           <>

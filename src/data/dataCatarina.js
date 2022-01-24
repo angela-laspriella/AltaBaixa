@@ -71,7 +71,7 @@ export const CatarinaTexto = [
     margin: "false",
     small: "false",
 
-    text: "The main goal of the application is to guide the user in the creation of a text composed with the generative typeface. As input, the application receives a text, and as output, the application can export (i) a PDF file in which the inserted text is composed with the resulting glyphs and (ii) a typeface in the True Type Format (TTF), representing the overall emotion of the input text. A video exemplifying the interaction with the application can be seen here..",
+    text: "The main goal of the application is to guide the user in the creation of a text composed with the generative typeface. As input, the application receives a text, and as output, the application can export (i) a PDF file in which the inserted text is composed with the resulting glyphs and (ii) a typeface in the True Type Format (TTF), representing the overall emotion of the input text. ",
     img: theApp,
     img2: figure5,
     smalltitle: "Figure 5",
