@@ -1,10 +1,14 @@
 import { getDefaultNormalizer } from "@testing-library/react";
 import styled from "styled-components";
-
+/*let oi = document.getElementsByClassName(".oi");
+oi.style.backgroundColor = "#eb6029";*/
 export const MainContainer = styled.div`
   width: 100vw;
-  background-color: #eb6029;
+
   overflow: hidden;
+  .oi {
+    background-color: #f9f8f8;
+  }
 `;
 
 export const Title = styled.h1`
@@ -81,13 +85,13 @@ export const Title2 = styled.h2`
 export const SliderContainer = styled.div`
   width: 100%;
   height: fit-content;
-
-  background: #1d1d1d;
+  background-color: #eb6029;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
+  .color {
+  }
   div {
     width: 600px;
   }
