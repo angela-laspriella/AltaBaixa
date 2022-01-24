@@ -139,7 +139,6 @@ export const SliderContainer = styled.div`
     width: 90%;
     height: auto;
     margin: auto;
-    mix-blend-mode: darken;
   }
 `;
 
@@ -162,5 +161,33 @@ export const OtherContainerParts = styled.div`
   img {
     width: 100%;
     margin-left: 30%;
+  }
+`;
+
+export const ImgOtherGridContainer = styled.div`
+  margin: auto;
+  margin-top: ${({ margin }) => (margin ? "2%" : "0")};
+
+  display: ${({ showGrid }) => (showGrid ? "flex" : "none")};
+
+  flex-direction: ${({ row }) => (row ? "column" : "row")};
+`;
+
+export const GridImage = styled.div`
+  width: 424px;
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-right: 40px;
+
+  margin-bottom: 8%;
+
+  gap: 24px;
+
+  img {
+    width: 200px;
+    height: auto;
+
+    filter: drop-shadow(8px 8px 8px #1c1c1c);
   }
 `;

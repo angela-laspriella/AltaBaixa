@@ -67,6 +67,8 @@ import {
   SliderContainer,
   SliderContainerF,
   OtherContainerParts,
+  GridImage,
+  ImgOtherGridContainer,
 } from "./CatarinaElements";
 
 import { Catarina, CatarinaTexto } from "../../data/dataCatarina";
@@ -161,7 +163,8 @@ const CatarinaSection = () => {
                 small={item.small}
                 showImage={item.showImage}
               >
-                <img src={item.img2} />
+                <img src={item.img2} showImg={item.showImg} />
+
                 <SmallContainer>
                   <div>
                     <SmallTitle>{item.smalltitle}</SmallTitle>
@@ -173,6 +176,30 @@ const CatarinaSection = () => {
                   </div>
                 </SmallContainer>
               </ImgOtherContainer>
+
+              <ImgOtherGridContainer
+                margin={item.margin}
+                row={item.row}
+                small={item.small}
+                showGrid={item.showGrid}
+              >
+                <GridImage showGrid={item.showGrid}>
+                  <img src={item.gridimg1} />
+                  <img src={item.gridimg2} />
+                  <img src={item.gridimg3} />
+                  <img src={item.gridimg4} />
+                </GridImage>
+                <SmallContainer>
+                  <div>
+                    <SmallTitle>{item.smalltitle}</SmallTitle>
+                    <SmallText>{item.smalltext}</SmallText>
+                  </div>
+                  <div>
+                    <SmallTitle>{item.smalltitle2}</SmallTitle>
+                    <SmallText>{item.smalltext2}</SmallText>
+                  </div>
+                </SmallContainer>
+              </ImgOtherGridContainer>
 
               <OtherContainerParts showSliderO={item.showSliderO}>
                 <ImgOtherContainer

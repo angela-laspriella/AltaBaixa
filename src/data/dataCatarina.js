@@ -10,6 +10,11 @@ import figure2 from "../images/Catarina/figure2.png";
 import figure3 from "../images/Catarina/figure3.png";
 import figure5 from "../images/Catarina/figure5.png";
 
+import grid1 from "../images/Catarina/fig1.png";
+import grid2 from "../images/Catarina/fig2.png";
+import grid3 from "../images/Catarina/fig3.png";
+import grid4 from "../images/Catarina/fig4.png";
+
 export const Catarina = [
   {
     text: "typEm — Adapting a Typeface to Text Emotions",
@@ -80,10 +85,16 @@ export const CatarinaTexto = [
     false: "false",
     margin: "false",
     small: "false",
+    showImage: "false",
+    showGrid: "false",
 
     text: "The main goal of the application is to guide the user in the creation of a text composed with the generative typeface. As input, the application receives a text, and as output, the application can export (i) a PDF file in which the inserted text is composed with the resulting glyphs and (ii) a typeface in the True Type Format (TTF), representing the overall emotion of the input text. ",
     img: theApp,
-    img2: figure5,
+    gridimg1: grid1,
+    gridimg2: grid2,
+    gridimg3: grid3,
+    gridimg4: grid4,
+
     smalltitle: "Figure 5",
     smalltext:
       "Screenshots of the application. The introduction page (left) and the input page (right).",
