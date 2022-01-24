@@ -81,7 +81,10 @@ export const IntroContainer = styled.div`
   }
 
   img {
-    width: 100%;
+    float: right;
+    padding-right: 15%;
+
+    width: 40%;
   }
 `;
 
