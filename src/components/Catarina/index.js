@@ -19,6 +19,20 @@ import aa3 from "../../images/Catarina/aa3.png";
 import aa4 from "../../images/Catarina/aa4.png";
 import aa5 from "../../images/Catarina/aa5.png";
 
+// Images positivos
+
+import pos1 from "../../images/Catarina/pos1.png";
+import pos2 from "../../images/Catarina/pos2.png";
+import pos3 from "../../images/Catarina/pos3.png";
+import pos4 from "../../images/Catarina/pos4.png";
+
+// Images negativos
+
+import neg1 from "../../images/Catarina/ng1.png";
+import neg2 from "../../images/Catarina/ng2.png";
+import neg3 from "../../images/Catarina/ng3.png";
+import neg4 from "../../images/Catarina/ng4.png";
+
 import {
   MainContainer,
   Title,
@@ -57,6 +71,42 @@ const CatarinaSection = () => {
       slidesToSlide: 1, // optional, default to 1.
     },
   };
+
+  // Positivo -------------------
+
+  //  Isto é o array de img
+  const PosA = [pos1, pos2, pos3, pos4];
+
+  // Isto é o intervalo e onde muda a imagem
+  const [currentIndexPos, setCurrentIndexPos] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndexPos((prevIndex) =>
+        currentIndexPos == PosA.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [currentIndexPos]); // Isto aqui reinicia o loop por alguma razao
+
+  // Negativo -------------------
+
+  //  Isto é o array de img
+  const NegA = [neg1, neg2, neg3, neg4];
+
+  // Isto é o intervalo e onde muda a imagem
+  const [currentIndexNeg, setCurrentIndexNeg] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndexNeg((prevIndex) =>
+        currentIndexNeg == NegA.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 1500);
+
+    return () => clearInterval(timer);
+  }, [currentIndexNeg]); // Isto aqui reinicia o loop por alguma razao
 
   return (
     <MainContainer>
@@ -112,7 +162,7 @@ const CatarinaSection = () => {
                   row={item.row}
                   small={item.small}
                 >
-                  <img src={item.img2} />
+                  <img src={PosA[currentIndexPos]} />
                   <SmallContainer>
                     <div>
                       <SmallTitle>{item.smalltitle}</SmallTitle>
@@ -127,7 +177,7 @@ const CatarinaSection = () => {
                   row={item.row}
                   small={item.small}
                 >
-                  <img src={item.img3} />
+                  <img src={NegA[currentIndexNeg]} />
                   <SmallContainer>
                     <div>
                       <SmallTitle>{item.smalltitle2}</SmallTitle>
